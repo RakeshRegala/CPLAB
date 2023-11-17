@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+int main() {
+int n;
+char sen[100],s[20],c;
+scanf("%c%s",&c,&s);
+scanf("\n");
+scanf("%[^\n]%*c",&sen);
+printf("%c\n%s\n%s",c,s,sen);
+}
