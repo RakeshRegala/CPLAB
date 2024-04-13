@@ -1,6 +1,6 @@
 #include<stdio.h>
 int key;
-int binsearch(int [ ], int);
+int binarysearch(int [ ], int);
 int main() {
     int i,a[30],n,k;
     printf("Enter no. of elements: ");
@@ -10,14 +10,14 @@ int main() {
         scanf("%d",&a[i]);
     printf("Enter the Key: ");
     scanf("%d",&key);
-    k=binsearch(a,n);
+    k=binarysearch(a,n);
     if(k==-1)
         printf("Key is not found.");
     else
         printf("Key is found at %d index.",k);
 }
 
-int binsearch(int* p, int n) {
+int binarysearch(int* p, int n) {
     int low,high,mid;
     low=0;
     high=n-1;
