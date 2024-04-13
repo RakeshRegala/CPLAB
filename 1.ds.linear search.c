@@ -1,4 +1,5 @@
 #include<stdio.h>
+int key;
 int linearsearch(int[ ] ,int);
 int main() {
     int i,a[30],n,k;
