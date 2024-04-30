@@ -1,0 +1,66 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#define MAX 20
+int queue[MAX];
+int front=-1;
+int rear=-1;
+
+void insert(int item)
+{
+	if((rear+1)%MAX==front)
+		printf("Queue is full");
+	else
+	{
+		rear=(rear+1)%MAX;
+		queue[rear]=item;
+		if(front=-1)
+		front=0;
+	}
+}
+
+void delete()
+{
+	if(front==-1)
+		printf("Queue is empty\n");
+	else
+	{
+		printf("deleted element: %d",queue[front]);
+		if(front==rear)
+			front=rear=-1;
+		else
+			front=(front+1)%MAX;
+	}
+}
+
+
+void display()
+{
+	int i;
+	if(front==-1)
+		printf("Queue is eampty");
+	else 
+	{
+		printf("\n 	***QUEUE CONTENT***	\n");
+		if(front<=rear)
+		{
+			for(i=front;i<=rear;i++)
+				printf("%d	",queue[i]);
+			
+		}
+		else
+		{
+			for(i=front;i<MAX-1;i++)
+				printf("%d",queue[i]);
+			for(i=0;i<=rear;i++)
+				printf("%d",queue[i]);
+				
+		}
+		
+	} 
+}
+
+
+int main()
+{
+
