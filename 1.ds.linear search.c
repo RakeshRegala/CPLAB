@@ -1,8 +1,8 @@
 #include<stdio.h>
-int key;
-int linearsearch(int[ ] ,int);
+
+int linearsearch(int[ ] ,int, int);
 int main() {
-    int i,a[30],n,k;
+    int i,a[30],n,r,key;
     printf("Enter no. of elements: ");
     scanf("%d",&n);
     printf("Enter the elements:\n");
@@ -10,17 +10,17 @@ int main() {
         scanf("%d",&a[i]);
     printf("Enter the Key: ");
     scanf("%d",&key);
-    k=linearsearch(a,n);
-    if(k==-1)
+    r=linearsearch(a,n,key);
+    if(r==-1)
         printf("Key is not Found.");
     else
-        printf("Key is found at %d index.",k);
+        printf("Key is found at %d index.",r);
 }
 
-int linearsearch(int* p, int n) {
+int linearsearch(int a[], int n, int key) {
     int i;
     for(i=0;i<n;i++)
-        if(key== *(p+i))
+        if(key== a[i])
             return i;
     return -1;
 }
